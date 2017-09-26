@@ -1,0 +1,88 @@
+<!--
+①发送main 接收detail
+②配置detail的state所对应的url
+③通过$stateParams接收参数
+④发送参数
+-->
+
+
+
+
+
+
+  <!--<div class="card">-->
+
+    <!--<div class="item item-divider">-->
+      <!--<a href="#/dgfStart">首页 </a>-->
+      <!--/详情-->
+    <!--</div>-->
+
+    <!--<div class="item item-text-wrap">-->
+      <!--<h2>{{dish.name}}</h2>-->
+      <!--<img class="img-responsive"-->
+           <!--ng-src="img/{{dish.img_lg}}" alt=""/>-->
+      <!--<h3>{{dish.detail}}</h3>-->
+      <!--<p>{{dish.material}}</p>-->
+      <!--<p>{{dish.price | currency:'￥'}}</p>-->
+    <!--</div>-->
+
+    <!--<div class="item item-divider text-right">-->
+      <!--<button-->
+          <!--ng-click="addToCart()"-->
+          <!--class="button button-balanced button-small">-->
+        <!--添加到购物车-->
+      <!--</button>-->
+      <!--<button-->
+          <!--ng-click="jump('dgfMain')"-->
+          <!--class="button button-energized button-small">我再看看</button>-->
+    <!--</div>-->
+  <!--</div>-->
+<div ng-include="'tpl/include/header.html'"></div>
+<ion-content class="has-header has-footer">
+    <div class="list card">
+        <div class="item item-divider">
+        <a href="#/dgfStart">首页 </a>
+        /详情
+        </div>
+        <div class="item item-avatar">
+            <img ng-src="img/{{dish.img_sm}}">
+            <h2>{{dish.name}}</h2>
+            <p>{{dish.pubtime | date:"MM-dd"}}</p>
+        </div>
+
+        <div class="item item-body">
+            <img class="full-image" ng-src="img/{{dish.img_lg}}">
+            <p>
+                {{dish.detail}}
+            </p>
+            <p>{{dish.material}}</p>
+            <h2 style="color:mediumvioletred">{{dish.price | currency:'￥'}}</h2>
+        </div>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+                <i class="icon ion-thumbsup"></i>
+                喜欢
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-chatbox"></i>
+                评论
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-share"></i>
+                分享
+            </a>
+        </div>
+
+    </div>
+    <div class="item item-divider text-right">
+        <button
+                ng-click="addToCart()"
+                class="button button-balanced button-small">
+            添加到购物车
+        </button>
+
+    </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

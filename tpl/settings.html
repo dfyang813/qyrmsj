@@ -1,0 +1,29 @@
+<div
+ng-include="'tpl/include/header.html'">
+
+</div>
+
+<ion-content class="has-header has-footer">
+
+  <div class="list list-inset">
+  <div
+              ng-click="showModal()"
+              class="item">
+          个人信息
+      </div>
+    <div
+        ng-click="openModal()"
+        class="item">
+      关于
+    </div>
+    <div ng-click="delLogin()" class="item">
+      退出登录
+    </div>
+  </div>
+
+</ion-content>
+
+<div
+ng-include="'tpl/include/footer.html'">
+
+</div>

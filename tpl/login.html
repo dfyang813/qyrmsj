@@ -1,0 +1,16 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<ion-content class="has-header has-footer">
+    <div class="list list-inset">
+        <label class="item item-input">
+            <input ng-model="order.uname" required type="text" placeholder="请输入用户名">
+        </label>
+        <label class="item item-input">
+            <input type="password" ng-model="order.upwd" required placeholder="请输入密码">
+        </label>
+    </div>
+    <div class="list list-inset">
+        <button ng-click="loginClick()" class="button button-block button-balanced button-stable login">登录</button>
+    </div>
+
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

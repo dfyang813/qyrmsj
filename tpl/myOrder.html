@@ -1,0 +1,44 @@
+
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-header has-footer">
+
+  <h3 class="text-center">我的订单</h3>
+
+  <!-- 通过grid来模拟一个table-->
+  <!-- 模拟thead-->
+  <div class="row">
+      <div class="col">菜品</div>
+    <div class="col">菜名</div>
+    <div class="col">下单时间</div>
+      <div class="col">单价</div>
+      <div class="col">操作</div>
+  </div>
+  <hr/>
+  <!-- 模拟tbody-->
+  <div
+      ng-repeat="order in orderList"
+      class="row row-center">
+
+    <div class="col">
+      <a href="#/dgfDetail/{{order.did}}">
+        <img class="img-responsive"
+             ng-src="img/{{order.pic}}" alt=""/>
+      </a>
+    </div>
+      <div class="col">
+          {{order.name}}
+      </div>
+    <div class="col">
+      {{order.order_time}}
+    </div>
+    <div class="col">
+      {{order.price}}
+    </div>
+      <div class="col"><button ng-click="delOrder($event)" name="{{order.oid}}" class="button button-assertive button-small">
+          取消订单
+      </button></div>
+  </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

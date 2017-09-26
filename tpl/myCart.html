@@ -1,0 +1,58 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+
+<ion-content class="has-header has-footer" ng-show="!isCartEmpty">
+    <h3 class="text-center has-header">我的购物车</h3>
+    <div class="list list-inset">
+        <button
+                ng-click="toggleEditStatus()"
+                class="button
+  button-clear button-dark">
+            {{editMsg}}
+        </button>
+        <div class="item"
+             ng-repeat="dish in cartList">
+            <div class="row row-center">
+                <div class="col col-25">
+                    <img class="img-responsive"
+                         ng-src="img/{{dish.img_sm}}" alt=""/>
+                </div>
+                <div class="col" ng-show="editEnable">
+                    <h3>{{dish.name}}</h3>
+
+                    <p>{{dish.price+"×"+dish.count}}</p>
+                </div>
+                <div class="col" ng-hide="editEnable">
+                    <button ng-click="deleteFromCart($index)">-</button>
+                    <span>{{dish.count}}</span>
+                    <button ng-click="addToCart($index)">+</button>
+                </div>
+
+                    <a class="col col-20 text-right" ng-click="del($event)" name="{{dish.ctid}}">删除</a>
+
+            </div>
+        </div>
+        <div class="item text-right">
+
+            <span class="total">合计：{{calcSum()}}</span>
+            <button
+                    class="button button-balanced" ng-click="jumpToOrder()">
+                立即下单
+            </button>
+        </div>
+    </div>
+</ion-content>
+
+<ion-content ng-show="isCartEmpty" class="has-header">
+
+    <div class="card" >
+        <div class="item">
+            <button
+                    ui-sref="dgfMain"
+                    class="button button-balanced button-block">去购物</button>
+        </div>
+    </div>
+</ion-content>
+
+
+<div ng-include="'tpl/include/footer.html'"></div>

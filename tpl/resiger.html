@@ -1,0 +1,26 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<ion-content class="has-header has-footer">
+    <div class="list">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">用户名</span>
+            <input ng-blur="blur()" ng-model="order.uname"
+                   type="text" required placeholder="请输入用户名">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">密码</span>
+            <input ng-blur="show()" type="password" ng-model="order.upwd" required placeholder="请输入密码">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">联系方式</span>
+            <input ng-blur="test()" type="text" ng-model="order.phone" required placeholder="请输入联系方式">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">地址</span>
+            <input type="text" ng-model="order.attr" required placeholder="请输入地址">
+        </label>
+    </div>
+    <div class="list list-inset">
+        <button ng-click="login()" class="button button-block button-balanced button-small">提交</button>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

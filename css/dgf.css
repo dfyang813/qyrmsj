@@ -1,0 +1,75 @@
+
+body{
+    background:#eddec3;
+}
+.img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.center{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#menus>a{
+    font-size:14px;
+    background:#eb3e7a;
+    color:#fff;
+}
+a{
+    cursor: pointer;
+}
+.login{
+    margin-top:20px;
+}
+.pros{
+    line-height:44px;
+}
+.head{
+    background:#ff5992;
+}
+.dgf{
+    line-height:44px;
+    color:#fff;
+}
+.btn{
+    background:rgba(241,143,173,0.8);
+    color:#fff;
+    font-size:14px;
+}
+.tab-box{
+    /*background:#e699b1;*/
+}
+.menu-list{
+    background:#eb3e7a;
+    color:#fff;
+}
+.tab-box>a{
+    display:inline-block;
+}
+.tab-item .active{
+    color:#f54d88;
+}
+.total{
+    line-height:50px;
+    padding-right:15px;
+    font-size:20px;
+    font-weight:400;
+}
+a{
+    text-decoration: none;
+}
+.info{
+   line-height:26px;
+}
+.edit{
+    margin-top:-10px;
+    float:right;
+    margin-right:20px;
+    font-size:16px;
+}
+
